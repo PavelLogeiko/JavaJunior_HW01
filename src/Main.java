@@ -10,10 +10,10 @@ public class Main {
         System.out.println("\nС помощью Stream API вывести на экран среднее\nзначение " +
                 "всех четных чисел в списке.");
 
-        System.out.println("Все четные числа в списке:");
-        Stream<Integer> evenNumbersStream = numbers.stream().filter(n -> n % 2 == 0);
-        List<Integer> evenNumbersList = evenNumbersStream.collect(Collectors.toList());
-        System.out.println(evenNumbersList);
+        List<Integer> evenNumbersList = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .collect(Collectors.toList());
+        System.out.println("Все четные числа в списке:\n" + evenNumbersList);
 
    double average = numbers.stream()
            .filter(n -> n % 2 == 0)
